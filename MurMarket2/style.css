@@ -1,0 +1,304 @@
+@media screen and (max-width: 800px) {
+	html {
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #eeeeee;
+}
+
+.main {
+	margin-bottom: 2rem;
+}
+
+.main-heading {
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 2rem 0;
+	text-align: center;
+}
+
+.showcase {
+	display: flex;
+	align-items: flex-start;
+	padding: 0 1vw 0 1vw;
+}
+
+.breed-checkbox {
+	display: none;
+}
+
+.showcase ul {
+	list-style: none;
+}
+
+.left-and-middle {
+	display: flex;
+}
+
+.left {
+	width: 20vw;
+}
+
+.left,
+.middle {
+	margin-right: 1vw;
+}
+
+.left,
+.right {
+	background-color: #bcbcbc;
+}
+
+.left ul li {
+	border-bottom: 0.1rem solid #5b5b5b;
+}
+
+.left ul li,
+.breed-label {
+	cursor: pointer;
+}
+
+.breed-label {
+	width: 100%;
+	display: inline-block;
+	padding: 0.7vw;
+	box-sizing: border-box;
+}
+
+.breed-name {
+	font-size: 1.2rem;
+}
+
+.breed-checkbox:checked ~ .showcase .middle-items .image-box {
+	opacity: .3;
+}
+
+#breed-1:checked ~ .showcase .middle-items .breed-1,
+#breed-2:checked ~ .showcase .middle-items .breed-2,
+#breed-3:checked ~ .showcase .middle-items .breed-3,
+#breed-4:checked ~ .showcase .middle-items .breed-4 {
+	opacity: 1;
+}
+
+#breed-1:checked ~ .showcase .left li:nth-child(1),
+#breed-2:checked ~ .showcase .left li:nth-child(2),
+#breed-3:checked ~ .showcase .left li:nth-child(3),
+#breed-4:checked ~ .showcase .left li:nth-child(4),
+.breed-label:hover {
+	background-color: #2f2f2f;
+	color: #fff;
+}
+	
+
+.middle {
+	width: 56vw;
+}
+
+.middle-items {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0;
+	width: 100%;
+}
+
+.middle-items li:last-child {
+	margin-bottom: 0;
+}
+
+.cat-image { 
+	width: 100%;
+	height: 100%;
+}
+
+.image-box {
+	height: 17vw;
+	margin: .5vw;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.image-box:nth-child(1),
+.image-box:nth-child(2) {
+	margin-top: 0;
+}
+
+.image-box:nth-child(8n -7),
+.image-box:nth-child(8n - 5),
+.image-box:nth-child(8n - 4),
+.image-box:nth-child(8n - 3),
+.image-box:nth-child(8n - 1) {
+	width: 18vw;
+}
+
+.image-box:nth-child(8n - 6),
+.image-box:nth-child(8n - 2) {
+	width: 37vw;
+}
+
+.image-box:nth-child(8n) {
+	width: 56vw;
+}
+
+.image-box:nth-child(8n - 7),
+.image-box:nth-child(8n - 5),
+.image-box:nth-child(8n - 2),
+.image-box:nth-child(8n) {
+	margin-left: 0;
+}
+
+.image-box:nth-child(8n - 6),
+.image-box:nth-child(8n - 3),
+.image-box:nth-child(8n - 1),
+.image-box:nth-child(8n) {
+	margin-right: 0;
+}
+
+.cat-info {
+	position: absolute;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+	padding: 1.4rem 0.6rem;
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	z-index: 1;
+	top: 1vw;
+	left: -25vw;
+	width: 14vw;
+	text-align: center;
+	transition: left 0.3s;
+}
+
+.image-box:hover .cat-info {
+	left: 0;
+}
+
+.right {
+	width: 20vw;
+	padding: .2vw .5vw;
+}
+
+.right-heading {
+	font-size: 1.7rem;
+	color: #f00;
+	text-transform: uppercase;
+}
+
+.rating-info {
+	text-align: right;
+}
+
+.rating-info > label {
+	font-size: 1.2rem;
+}
+
+.rating-list {
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: left;
+}
+
+.rating-list .breed-name {
+	font-size: 1.4rem;
+}
+
+.rating-list li {
+	margin: .5rem 0;
+}
+
+.rating-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: .5rem;
+}
+
+.rating-line.excellent-rating {
+	width: 70%;
+	height: 1.4rem;
+	background: linear-gradient(to right, #0f0, #fff);
+	border: 1px solid #0f0;
+}
+
+.rating-line.good-rating {
+	width: 50%;
+	height: 1.4rem;
+	background: linear-gradient(to right, #ff0, #fff);
+	border: 1px solid #ff0;
+}
+
+.rating-line.poor-rating {
+	width: 30%;
+	height: 1.4rem;
+	background: linear-gradient(to right, #f00, #fff);
+	border: 1px solid #f00;
+}
+
+.rating-mark {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+#sort-reverse:checked + .rating-list .rating-9 {
+	order: 1;
+}
+
+#sort-reverse:checked + .rating-list .rating-8 {
+	order: 2;
+}
+
+#sort-reverse:checked + .rating-list .rating-7 {
+	order: 3;
+}
+
+#sort-reverse:checked + .rating-list .rating-6 {
+	order: 4;
+}
+
+#sort-reverse:checked + .rating-list .rating-5 {
+	order: 5;
+}
+
+#sort-reverse:checked + .rating-list .rating-4 {
+	order: 6;
+}
+
+#sort-reverse:checked + .rating-list .rating-3 {
+	order: 7;
+}
+
+#sort-reverse:checked + .rating-list .rating-2 {
+	order: 8;
+}
+
+#sort-reverse:checked + .rating-list .rating-1 {
+	order: 9;
+}
+
+.footer {
+	border-top: 0.1rem solid #bcbcbc;
+	padding: 1rem 2rem;
+	font-size: 1rem;
+}
+
+.footer-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer a {
+	font-style: normal;
+	text-decoration: none;
+}
